@@ -7,13 +7,13 @@ const height = window.innerHeight;
 canvas.width = width;
 canvas.height = height;
 
-let point = new Point(new Vector2d(200,300),100);
+let point = new Point(new Vector2d(207,300),100);
 let mouseVector = new Vector2d(0,0);
 let difference = new Vector2d(0,0);
 
 
 point.draw(context);
-
+{
 window.addEventListener('click',(evt)=>{
   mouseVector.dx = evt.clientX;
   mouseVector.dy = evt.clientY;
@@ -23,9 +23,10 @@ window.addEventListener('click',(evt)=>{
   console.log(difference)
   console.log(difference.magnitude);
   if(difference.magnitude<= point.radius){
-    point.position.dx += 50;
+    point.position.dx += 450;
     point.position.dy += 50;
     point.draw(context);
   }
 
 })
+}

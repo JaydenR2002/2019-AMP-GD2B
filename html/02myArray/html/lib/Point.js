@@ -5,7 +5,6 @@ constructor(position,radius){
   this.radius = radius;
 
 }
-
 draw(context){
   context.beginPath();
   context.strokeStyle = "rgb(0,0,255)";
