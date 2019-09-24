@@ -7,6 +7,12 @@ const height = window.innerHeight;
 canvas.width = width;
 canvas.height = height;
 
-let point = new Point(new Vector2d(207,300),100);
-let mouseVector = new Vector2d(0,0);
-let difference = new Vector2d(0,0);
+let A = new Point(new Vector2d(200,200),20, true);
+
+function animation(){
+  requestAnimationFrame(animation);
+  context.clearRect(0,0,width,height);
+  A.draw(context);
+}
+
+animation();
